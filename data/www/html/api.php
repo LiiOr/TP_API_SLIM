@@ -65,8 +65,8 @@ $app->post('/articles', function ($req, $resp, $args) { // OK
 	}
 });	
 
-$app->put('/articles/{id}', function ($req, $resp, $args) { // à revoir /!\
-	$id = $args['id'];
+$app->put('/articles/{id}', function ($req, $resp, $args) { // OK - NB : Cocher x-wwww-form-urlencoded sur postman
+	$id = $args['id']; 
 
 	try {
 		$params = $req->getParsedBody();
